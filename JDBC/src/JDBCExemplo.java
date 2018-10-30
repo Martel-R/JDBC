@@ -31,10 +31,8 @@ public class JDBCExemplo {
                 int ano=0,mes = 0,dia=0;
                 System.out.print("Nome: ");
                 nome = input.next();
-                validaInfo(nome);
                 System.out.print("Contato: ");
                 contato = input.nextBigDecimal();
-                validaInfo(contato.toString());
                 System.out.print("Endereco: ");
                 endereco = input.next();
                 System.out.print("Email: ");
@@ -49,7 +47,16 @@ public class JDBCExemplo {
                 insert();
                 break;
             case 2: // DELETAR
-
+                System.out.print("Editar contato\n1 - Listar contatos\n2 - Inserir número para exclusão");
+                int b = input.nextInt();
+                switch (b){
+                    case 1:
+                        listaUsuario();
+                        int id;
+                        System.out.print("Digite o numero para exclusão de cadastro: ");
+                        id = input.nextInt();
+                        delete(id);
+                }
                 break;
             case 3: // ATUALIZAR
                 System.out.print("Editar contato\n1 - Listar contatos\n2 - Inserir número para atualização");
@@ -72,13 +79,11 @@ public class JDBCExemplo {
                             case 2: // Nome
                                 System.out.println("Qual o novo nome: ");
                                 nome = input.next();
-                                validaInfo(nome);
                                 update(id,"nome", nome);
                                 break;
                             case 3: // Endereço
                                 System.out.println("Qual o novo Endereço: ");
                                 endereco= input.next();
-                                validaInfo(endereco);
                                 update(id,"endereco", endereco);
                                 break;
                             case 4: // Data de Nascimento
@@ -90,13 +95,11 @@ public class JDBCExemplo {
                                 System.out.print("Dia: ");
                                 d=input.nextInt();
                                 valor = String.valueOf(y)+"-"+String.valueOf(m)+"-"+String.valueOf(d);
-                                validaInfo(valor);
                                 update(id,"id_contato", valor);
                                 break;
                             case 5: // EMAIL
                                 System.out.println("Qual o novo email: ");
                                 email = input.next();
-                                validaInfo(email);
                                 update(id,"email", valor);
                                 break;
 
@@ -184,7 +187,6 @@ public class JDBCExemplo {
                          "values (?, ?, ?, ?, ?)";
             String select = "select * from contato";
             PreparedStatement instucao = mysql.prepareStatement(sql);
-            PreparedStatement instucaoSelect = mysql.prepareStatement(select);
             instucao.setInt(1, pk);
             instucao.setString(2, nome);
             instucao.setString(3, endereco);
@@ -209,9 +211,9 @@ public class JDBCExemplo {
     private static void update(int id, String atributo, String valor){
 
         try {
-            String sql = "UPDATE contato SET "+atributo+" = "+ valor +" WHERE id_contato = "+id+";";
+            String sql = "UPDATE contato SET "+atributo+" = ? WHERE id_contato = "+id+";";
             PreparedStatement instucao = mysql.prepareStatement(sql);
-
+            instucao.setString(1,valor);
             if (!instucao.execute()){
                 ResultSet rs = instucao.getResultSet();
                 System.out.println("foi "+contato.intValue()+ " " + date);
@@ -225,11 +227,19 @@ public class JDBCExemplo {
         }
     }
 
-    private static void validaInfo(String id){
-        if (id.isEmpty()){
-            System.out.print("Insira um dado válido: ");
-            id = input.next();
-            validaInfo(id);
+    public static void delete(int id){
+
+        String sql = "DELETE FROM contatos WHERE id = ?";
+        try {
+
+            PreparedStatement instrucao = mysql.prepareStatement(sql);
+            instrucao.setInt(1, id);
+            instrucao.execute();
+            System.out.println("Deletado");
+
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
     }
 }
