@@ -106,7 +106,7 @@ public class JDBCExemplo {
                             default:
                                 System.out.println("Opção invalida, tente novamente ");
                                 System.out.println("O que você quer alterar? \n1 - Número\n2 - Nome\n3 - Endereço\n4 - Data de nascimento\n5 - Email");
-//                                alterarOpcao = input.nextInt();
+
 
                         }
                         break;
@@ -151,33 +151,6 @@ public class JDBCExemplo {
         return;
     }
 
-// --Commented out by Inspection START (28/10/2018 20:40):
-//    private static void listarUmUsuario(int id){
-//        try {
-//            String sql = "select * from contato where id_contato = " + id + ";";
-//            PreparedStatement instucao = mysql.prepareStatement(sql);
-//            stmt = mysql.createStatement();
-//            ResultSet rs = stmt.executeQuery(sql);
-//            while (rs.next()){
-//                id = rs.getInt("id_contato");
-//                String nome = rs.getString("nome");
-//                String endereco = rs.getString("endereco");
-//                String data = String.valueOf(rs.getDate("data_nasc"));
-//                String email = rs.getString("email");
-//                System.out.print("NÚMERO: " + id +
-//                        " NOME: " + nome +
-//                        " ENDEREÇO: " + endereco +
-//                        " DATA DE NASCIMENTO " + data +
-//                        " EMAIL: " +email +
-//                        "\n");
-//            }
-//        } catch (SQLException e){
-//            System.out.println("Ocorreu um erro!");
-//            throw new RuntimeException(e.getMessage());
-//        }
-//    }
-// --Commented out by Inspection STOP (28/10/2018 20:40)
-
     private static void insert(){
         int pk = Integer.valueOf(String.valueOf(contato));
         try {
@@ -193,8 +166,6 @@ public class JDBCExemplo {
             instucao.setDate(4, date);
             instucao.setString(5, email);
 
-//            instucao.execute();
-//            instucaoSelect.executeQuery();
             if (!instucao.execute()){
                 ResultSet rs = instucao.getResultSet();
                 System.out.println("foi "+contato.intValue()+ " " + date);

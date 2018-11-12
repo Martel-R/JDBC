@@ -10,18 +10,27 @@
 <head>
   <meta charset="utf-8">
   <title>TESTE</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
 </head>
 <body>
 
-    <form method='GET' action='../src/SalvarContatoServlet.java'>
-    Nome:
-        <input type='text' name='nome'/>
-    Endereco:
-        <input type='text' name='endereco'/>
-    Data Nascimento:
-        <input type='text' name='data_nascimento'>
+    <div id="quadrado">
+        <h1>Agenda JDBC</h1>
+        <form method='GET' id="formulario" action='salvar'>
+            Nome:
+            <br><input type='text' name ='nome'/><br><br>
+            Contato:<br>
+            <input type='text' name='contato'/><br><br>
+            Endereco:<br>
+            <input type='text' name='endereco'/><br><br>
+            Email:<br>
+            <input type='text' name='email'/><br><br>
+            Data Nascimento:<br>
+            <input type='date' name='data_nascimento'><br><br>
 
-        <button type="submit">Criar Contato</button>
-    </form>
+            <button type="submit">Criar Contato</button><br>
+        </form>
+    </div>
 </body>
 </html>

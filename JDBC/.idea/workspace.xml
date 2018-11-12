@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e40fc1e-e34b-4e7b-bbe1-e3e63f8fd533" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../HelloTomcatWorld/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HelloTomcatWorld/src/ListaContatoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HelloTomcatWorld/src/SalvarContatoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HelloTomcatWorld/src/Servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HelloTomcatWorld/web/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HelloWorldTomcat/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HelloTomcatWorld/src/Contato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HelloTomcatWorld/web/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloTomcatWorld/src/SalvarContatoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloTomcatWorld/src/SalvarContatoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloTomcatWorld/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloTomcatWorld/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDBC/JDBCExemplo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDBC/JDBCExemplo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JDBCExemplo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JDBCExemplo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,11 +37,12 @@
         <counts>
           <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -60,13 +62,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3903" />
+          <entry key="java" value="3913" />
           <entry key="txt" value="256" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3903" />
+          <entry key="JAVA" value="3913" />
           <entry key="PLAIN_TEXT" value="256" />
         </counts>
       </usages-collector>
@@ -81,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/JDBCExemplo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="6" selection-end-column="41" />
+            <state relative-caret-position="20">
+              <caret line="154" column="41" lean-forward="true" selection-start-line="154" selection-end-line="155" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,9 +133,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="676" />
-    <option name="width" value="697" />
-    <option name="height" value="745" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -171,8 +174,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,10 +181,17 @@
               <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
               <item name="JDBC" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -244,6 +252,8 @@
       <workItem from="1540939179349" duration="2103000" />
       <workItem from="1540944577147" duration="362000" />
       <workItem from="1541543712772" duration="817000" />
+      <workItem from="1541548124823" duration="890000" />
+      <workItem from="1541973427658" duration="1457000" />
     </task>
     <task id="LOCAL-00001" summary="em processo de insersao">
       <created>1540743325329</created>
@@ -270,13 +280,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27874000" />
+    <option name="totallyTimeSpent" value="30221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18835099" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19440243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -285,14 +295,14 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" x="0" y="23" width="1366" height="715" id="Run" order="2" type="WINDOWED" weight="0.16894197" />
+      <window_info anchor="bottom" x="0" y="23" width="1366" height="715" id="Run" order="2" type="WINDOWED" visible="true" weight="0.16894197" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39966556" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32935154" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32935154" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3277592" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.3283082" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32935154" />
@@ -353,12 +363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../HelloWorldTomcat/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../HelloTomcatWorld/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11/lib/src.zip!/java.sql/java/sql/Statement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -368,13 +372,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JDBCExemplo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="6" selection-end-column="41" />
+        <state relative-caret-position="20">
+          <caret line="154" column="41" lean-forward="true" selection-start-line="154" selection-end-line="155" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../HelloWorldTomcat/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../HelloTomcatWorld/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
