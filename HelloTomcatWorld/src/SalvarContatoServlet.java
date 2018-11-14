@@ -1,3 +1,6 @@
+import com.mysql.jdbc.Driver;
+import conexao.MySql;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,33 +21,36 @@ public class SalvarContatoServlet extends HttpServlet {
     private  int contato;
     private  Date date = null;
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    }
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        PrintWriter out = response.getWriter();
-//        response.setContentType("text/html");
-        nome = request.getParameter("nome");
-        endereco = request.getParameter("endereco");
-        email = request.getParameter("email");
-        contato = request.getIntHeader("contato");
-        date = request.getDateHeader("data_nascimento");
+        request.getRequestDispatcher("/WEB-INF/criar-contato.jsp").forward(request,response);
+        Contato insere = null;
+
+        insere.setId(Long.valueOf(request.getParameter("contato")));
+        insere.setNome(request.getParameter("nome"));
+        insere.setEndereco(request.getParameter("endereco"));
+        insere.setEmail(request.getParameter("email"));
+
+        MySql db = new MySql();
+
+        String sql = "insert into contato (id_contato, nome, endereco, data_nasc, email) values (?, ?, ?, ?, ?)";
+
+        Connection connection= db.conecta();
 
         try {
-            Connection mysql = DriverManager.getConnection("jdbc:mysql://localhost/agendaaula", "root", "1993Martel");
-            String sql = "insert into contato " +
-                    "(id_contato, nome, endereco, data_nasc, email) values (?, ?, ?, ?, ?)";
-            PreparedStatement instucao = mysql.prepareStatement(sql);
-            instucao.setInt(1, contato);
-            instucao.setString(2, nome);
-            instucao.setString(3, endereco);
-            instucao.setDate(4, date);
-            instucao.setString(5, email);
-            if (!instucao.execute()){
-                response.sendRedirect("index.jsp");
+            PreparedStatement instrucao = connection.prepareCall(sql);
+            instrucao.setLong(1, insere.getId());
+            instrucao.setString(2, insere.getNome());
+            instrucao.setString(3,insere.getEndereco());
+            instrucao.setDate(4, new Date(insere.getDataNascimento().getTimeInMillis()));
+            instrucao.setString(5, insere.getEmail());
+            if (!instrucao.execute()){
+                System.out.println("FOI");
             } else {
-                response.sendRedirect("index.jsp");
+                System.out.println("cagou tudo");
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 }

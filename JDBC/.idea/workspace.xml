@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e40fc1e-e34b-4e7b-bbe1-e3e63f8fd533" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../HelloTomcatWorld/src/Contato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HelloTomcatWorld/web/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HelloTomcatWorld/.idea/libraries/mysql_mysql_connector_java_8_0_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HelloTomcatWorld/src/conexao/MySql.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HelloTomcatWorld/web/WEB-INF/criar-contato.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloTomcatWorld/HelloTomcatWorld.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloTomcatWorld/HelloTomcatWorld.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloTomcatWorld/src/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloTomcatWorld/src/Contato.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HelloTomcatWorld/src/SalvarContatoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloTomcatWorld/src/SalvarContatoServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HelloTomcatWorld/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloTomcatWorld/web/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDBC/JDBCExemplo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDBC/JDBCExemplo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JDBCExemplo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JDBCExemplo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,8 +42,10 @@
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -83,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/JDBCExemplo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="154" column="41" lean-forward="true" selection-start-line="154" selection-end-line="155" />
+            <state relative-caret-position="340">
+              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -174,6 +177,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,7 +194,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -201,7 +204,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541546703832" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542139955428" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mysql-connector-java-8.0.13.zip!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -253,7 +256,9 @@
       <workItem from="1540944577147" duration="362000" />
       <workItem from="1541543712772" duration="817000" />
       <workItem from="1541548124823" duration="890000" />
-      <workItem from="1541973427658" duration="1457000" />
+      <workItem from="1541973427658" duration="1846000" />
+      <workItem from="1542136355953" duration="1422000" />
+      <workItem from="1542147344937" duration="1887000" />
     </task>
     <task id="LOCAL-00001" summary="em processo de insersao">
       <created>1540743325329</created>
@@ -280,13 +285,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30221000" />
+    <option name="totallyTimeSpent" value="33919000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19440243" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20045386" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -295,7 +299,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" x="0" y="23" width="1366" height="715" id="Run" order="2" type="WINDOWED" visible="true" weight="0.16894197" />
+      <window_info anchor="bottom" x="0" y="23" width="1366" height="715" id="Run" order="2" type="WINDOWED" weight="0.16894197" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39966556" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -372,8 +376,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JDBCExemplo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="154" column="41" lean-forward="true" selection-start-line="154" selection-end-line="155" />
+        <state relative-caret-position="340">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

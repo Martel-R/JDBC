@@ -17,7 +17,7 @@
 
     <div id="quadrado">
         <h1>Agenda JDBC</h1>
-        <form method='GET' id="formulario" action='salvar'>
+        <form method='POST' id="formulario" action='salvar'>
             Nome:
             <br><input type='text' name ='nome'/><br><br>
             Contato:<br>
